@@ -1,6 +1,6 @@
 {
   "name": "nuxt-ga-autotrack-module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Nuxt.js module and plugin for using google analytics with autotrack",
   "license": "MIT",
   "contributors": [
