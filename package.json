@@ -1,0 +1,50 @@
+{
+  "name": "nuxt-ga-autotrack-module",
+  "version": "0.0.0",
+  "description": "Nuxt.js module and plugin for using google analytics with autotrack",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "DaxChen <dd@daxchen.com>"
+    }
+  ],
+  "main": "dist/index.js",
+  "repository": "https://github.com/DaxChen/nuxt-ga-autotrack-module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "nuxt-module",
+    "watch": "nuxt-module --watch",
+    "lint": "eslint lib src test",
+    "lint-fix": "eslint --fix lib src test",
+    "test": "NODE_ENV=test npm run build && npm run lint && jest",
+    "release": "standard-version && git push --follow-tags && npm publish",
+    "prepare": "npm run build"
+  },
+  "eslintIgnore": [
+    "*.template.*"
+  ],
+  "files": [
+    "lib",
+    "src",
+    "dist",
+    "templates"
+  ],
+  "jest": {
+    "testEnvironment": "node",
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "lib",
+      "src"
+    ]
+  },
+  "dependencies": {
+    "autotrack": "^2.4.1",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "nuxt-module-builder": "latest"
+  }
+}
